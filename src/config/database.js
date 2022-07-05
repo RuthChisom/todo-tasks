@@ -6,8 +6,6 @@ config();
 async function connect(uri){
     try{
     await mongoose.connect(uri || process.env.MONGO_DB_LOCAL);
-    console.log("process.env.MONGO_DB_LOCAL=",process.env.MONGO_DB_LOCAL);
-    console.log("uri=",uri);
     console.log("Successfully Connected to Database");
     }
     catch(error){
